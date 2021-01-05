@@ -12,14 +12,17 @@ Loader : A system the enable suitable and comfy loads<br>
 Server: The Dummy server any function represent a request<br>
 InMemoryDB: Dummy database inside the memory<br>
 
+# Live Demo
+
+<a href="http://ynatest.s89.upress.link/level-1/3/ShoppingCart/#/main"> Click here ! </a>
 
 # How to run
 
-Download Xammp or another lampp env
-Move all the files to htdocs
-open localhost and that it you are in ;)
-
-Profit??
+Download Xammp or another lampp env<br>
+Move all the files to htdocs<br>
+open localhost and that it you are in ;)<br>
+<br>
+Profit??<br>
 
 # Product Functions
 
