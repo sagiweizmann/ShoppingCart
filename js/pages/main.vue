@@ -60,6 +60,7 @@
                 if(this.is_creating) this.is_creating = false;
                 this.edit_dialog = false;
                 this.discard_dialog = false;
+                this.shopping_list.splice(this.in_edit, 1);
             },
             save: function() {
                 if(this.in_edit.name === "") {
@@ -86,6 +87,11 @@
                 this.in_edit = item_id;
             },
             removeItem: function(item_id) {
+                if(!this.delete_dialog) {
+                    this.delete_dialog = true;
+                    return;
+                }
+                
                 this.shopping_list.splice(item_id, 1);
 
                 APIManager.API.request("updateShoppingList", this.shopping_list, function(response) {
