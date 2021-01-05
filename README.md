@@ -1,6 +1,5 @@
 # ShoppingCart
-
-
+![Logo](logo.png)
 # Description 
 
 ShoppingCart is a Vue based App 
