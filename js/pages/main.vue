@@ -43,8 +43,9 @@
                 this.is_creating = true;
                 this.edit_dialog = true;
                 this.shopping_list.push({
+                    id: this.shopping_list.length,
                     name: '',
-                    quntity: 0,
+                    quantity: 0,
                     price: 0,
                     description: "",
                     basket: 0
@@ -109,6 +110,13 @@
             :headers="headers"
             :items="shopping_list"
             :search="search">
+            
+            <template v-slot:item.basket="{ item }">
+                <v-checkbox
+                    v-model="item.basket"
+                    ></v-checkbox>
+            </template>
+
             <template v-slot:top>
                 <v-app-bar>
                     <v-toolbar-title>Shopping List</v-toolbar-title>
@@ -185,7 +193,7 @@
             </template>
 
             <template v-slot:item.actions="{ item }">
-                <v-icon @click="editItem(item)">
+                <v-icon @click="editItem(item.id)">
                     mdi-pencil-circle
                 </v-icon>
                 <!-- Delete dialog -->
