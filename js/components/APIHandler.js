@@ -405,7 +405,7 @@ class InMemoryDB {
 
         return {
             status: 1,
-            data: "OK"
+            data: InMemoryDB.database[collection_name]
         };
     }
 
