@@ -13,6 +13,14 @@ Server: The Dummy server any function represent a request<br>
 InMemoryDB: Dummy database inside the memory<br>
 
 
+# How to run
+
+Download Xammp or another lampp env
+Move all the files to htdocs
+open localhost and that it you are in ;)
+
+Profit??
+
 # Product Functions
 
 ●Ability to add new products to the list.
