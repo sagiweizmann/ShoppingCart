@@ -3,14 +3,14 @@
 # Description 
 
 ShoppingCart is a Vue based App 
-In general i have based on the ApiShift library , 
-used Vuetify for the ui .
-In ApiShift there is 4 classes:
-APIManager: Turning on the system 
-APIHandler : Tools to communicate with the server
-Loader : A system the enable suitable and comfy loads
-Server: The Dummy server any function represent a request
-InMemoryDB: Dummy database inside the memory
+In general i have based on the ApiShift library <br>
+used Vuetify for the ui . <br>
+In ApiShift there is 4 classes:<br>
+APIManager: Turning on the system <br>
+APIHandler : Tools to communicate with the server<br>
+Loader : A system the enable suitable and comfy loads<br>
+Server: The Dummy server any function represent a request<br>
+InMemoryDB: Dummy database inside the memory<br>
 
 
 # Product Functions
@@ -26,3 +26,8 @@ InMemoryDB: Dummy database inside the memory
 # Photos
 ![1](photos/system.png)
 
+# Projects that made this possible
+ * [VueJS](https://github.com/vuejs)
+ * [Vuetify](https://github.com/vuetifyjs)
+ * [http-vue-loader](https://github.com/FranckFreiburger/http-vue-loader)
+ * [Vuebar](https://github.com/DominikSerafin/vuebar)
