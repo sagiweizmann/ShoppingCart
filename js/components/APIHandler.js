@@ -281,7 +281,7 @@ class APIHandler {
      * @param {function} HandlerMethod Function to handle the response or error
      * @param {boolean} chain Open loader until request finishes
      */
-    request(method, attached_data = {}, handlerMethod = function (response) {}, chain = true) {
+    request(method, attached_data, handlerMethod = function (response) {}, chain = true) {
         // Define request function without running it
         return APIManager.Loader.load((resolve, reject) => {
             handlerMethod(APIManager.server[method](attached_data));
