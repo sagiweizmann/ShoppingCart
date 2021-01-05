@@ -17,5 +17,5 @@ ShoppingCart is a Vue based App
 ●When the user clicks on a product, the product details form will be displayed with the Ability to edit
 
 # Photos
-![1](photos/1.png)
-![2](photos/2.png)
+![1](system.png)
+
