@@ -12,6 +12,9 @@
                 },
                 headers: [
                     { text: 'Name', value: 'name' },
+                    { text: 'Quntity', value: 'quantity' },
+                    { text: 'Price', value: 'price' },
+                    { text: 'Description', value: 'description' },
                     { text: 'Basket', value: 'basket' },
                     { text: 'Actions', value: 'actions', sortable: false }
                 ],
@@ -41,6 +44,9 @@
                 this.edit_dialog = true;
                 this.shopping_list.push({
                     name: '',
+                    quntity: 0,
+                    price: 0,
+                    description: "",
                     basket: 0
                 })
                 this.in_edit = this.shopping_list.length - 1;
@@ -67,7 +73,6 @@
                     else {
                         APIManager.API.notify(response.data, 'error');
                     }
-                    mhandler.updateControllerTasks();
                 });
 
                 this.is_creating = false;
@@ -89,7 +94,6 @@
                     else {
                         APIManager.API.notify(response.data, 'error');
                     }
-                    mhandler.updateControllerTasks();
                 });
                 this.delete_dialog = false;
             }
@@ -141,6 +145,15 @@
                                 <v-row>
                                     <v-col cols="12" sm="6" md="6">
                                         <v-text-field v-model="shopping_list[in_edit].name" label="Item Name"></v-text-field>
+                                    </v-col>
+                                    <v-col cols="12" sm="6" md="6">
+                                        <v-text-field v-model="shopping_list[in_edit].quantity" label="Quantity"></v-text-field>
+                                    </v-col>
+                                    <v-col cols="12" sm="6" md="6">
+                                        <v-text-field v-model="shopping_list[in_edit].price" label="Price"></v-text-field>
+                                    </v-col>
+                                    <v-col cols="12" sm="6" md="6">
+                                        <v-text-field v-model="shopping_list[in_edit].description" label="Description"></v-text-field>
                                     </v-col>
                                 </v-row>
                             </v-container>

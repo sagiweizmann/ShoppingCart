@@ -379,12 +379,14 @@ class InMemoryDB {
     }
 
     createCollection(collection_name) {
-        if(InMemoryDB.database[collection_name] !== undefined) {
+        if(InMemoryDB.database.hasOwnProperty(collection_name)) {
             return {
                 status: 0,
-                data: "Couldn't create collection"
+                data: "Collection exists"
             };
         }
+
+        InMemoryDB.database[collection_name] = [];
 
         return {
             status: 1,
@@ -394,7 +396,7 @@ class InMemoryDB {
     }
 
     getCollection(collection_name) {
-        if(InMemoryDB.database[collection_name] !== undefined) {
+        if(!InMemoryDB.database.hasOwnProperty(collection_name)) {
             return {
                 status: 0,
                 data: "Collection undefined"
@@ -407,8 +409,8 @@ class InMemoryDB {
         };
     }
 
-    updateCollection(id, instance) {
-        if(InMemoryDB.database[collection_name] !== undefined) {
+    updateCollection(collection_name, instance) {
+        if(!InMemoryDB.database.hasOwnProperty(collection_name)) {
             return {
                 status: 0,
                 data: "Collection undefined"
