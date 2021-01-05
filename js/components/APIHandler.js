@@ -405,7 +405,7 @@ class InMemoryDB {
 
         return {
             status: 1,
-            data: ""
+            data: "OK"
         };
     }
 
@@ -420,7 +420,7 @@ class InMemoryDB {
         InMemoryDB.database[collection_name] = instance;
         return {
             status: 1,
-            data: 1
+            data: "OK"
         };
     }
 }
