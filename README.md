@@ -3,8 +3,15 @@
 # Description 
 
 ShoppingCart is a Vue based App 
+In general i have based on the ApiShift library , 
+used Vuetify for the ui .
+In ApiShift there is 4 classes:
+APIManager: Turning on the system 
+APIHandler : Tools to communicate with the server
+Loader : A system the enable suitable and comfy loads
+Server: The Dummy server any function represent a request
+InMemoryDB: Dummy database inside the memory
 
-**some of the code based on APIShift Engine ;)
 
 # Product Functions
 
